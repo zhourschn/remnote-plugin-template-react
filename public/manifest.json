@@ -1,8 +1,9 @@
 {
   "author": "zhourschn",
-  "name": "youdaoaudio",
-  "description": "use youdao api tu play txt-audio",
+  "name": "有道词典发音",
+  "description": "使用有道词典API播放单词发音，支持控制播放速度和重复次数",
   "enableOnMobile": true,
+  "repoUrl": "https://github.com/zhourschn/remnote-plugin-template-react",
   "id": "zhourschn-d88l3x4",
   "manifestVersion": 1,
   "version": {

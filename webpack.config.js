@@ -13,7 +13,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 const isProd = process.env.NODE_ENV === 'production';
 const isDevelopment = !isProd;
 
-const fastRefresh = isDevelopment ? new ReactRefreshWebpackPlugin() : null;
+// Disable React Refresh for now
+// const fastRefresh = isDevelopment ? new ReactRefreshWebpackPlugin() : null;
+const fastRefresh = null;
 
 const SANDBOX_SUFFIX = '-sandbox';
 
@@ -48,7 +50,16 @@ const config = {
         test: /\.css$/i,
         use: [
           isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { url: false } },
+          { 
+            loader: 'css-loader', 
+            options: { 
+              url: false,
+              modules: {
+                auto: true,
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              }
+            } 
+          },
           'postcss-loader',
         ],
       },
