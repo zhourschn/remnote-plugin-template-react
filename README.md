@@ -1,28 +1,58 @@
-# 有道词典发音插件
+# RemNote Youdao Audio Flashcards Plugin
 
-这是一个RemNote插件，使用有道词典API播放单词发音，支持控制播放速度和重复次数。
+A RemNote plugin that automatically plays audio for English words or sentences in flashcards using the Youdao Dictionary API.
 
-## 功能
+## Features
 
-- 播放RemNote卡片中单词的有道词典发音
-- 可调节播放速度（0.5-2.0倍速）
-- 可设置重复播放次数（1-5次）
-- 支持在闪卡界面自动播放发音
-- 提供快捷命令播放当前选中内容的发音
+- Automatically plays audio for the text on the front side of flashcards
+- Supports both single words and complete sentences
+- Adjustable playback speed through settings
+- Configurable repeat count for audio playback
+- Toggle auto-play on/off
+- Test audio command for any word or phrase
 
-## 使用方法
+## How to Use
 
-1. 在RemNote中安装此插件
-2. 在插件设置中配置播放速度、重复次数和是否自动播放
-3. 使用方式：
-   - 在侧边栏小组件中点击"播放发音"按钮
-   - 在闪卡界面使用播放按钮
-   - 使用快捷命令播放当前选中内容的发音
+1. Install the plugin in RemNote
+2. Create flashcards with English text on the front side
+3. When reviewing flashcards, the plugin will automatically play the pronunciation
+4. Use the command palette (Ctrl+P) and search for "Test Youdao Audio" to manually test the pronunciation of any word or sentence
 
-## 注意事项
+## Settings
 
-- 此插件使用有道词典的公开API，请合理使用
-- 播放功能需要网络连接才能正常工作
-- 最适合用于英语单词的发音
+- **Enable Auto Play**: Turn automatic pronunciation on or off
+- **Playback Speed**: Adjust the speed of audio playback (default 1.0)
+- **Repeat Count**: Number of times the audio will repeat (default 1)
+
+## API Information
+
+This plugin uses the Youdao Dictionary API at:
+```
+http://dict.youdao.com/dictvoice?type=1&audio=yourword
+```
+
+Where `yourword` is the word or phrase to be pronounced. For example:
+```
+http://dict.youdao.com/dictvoice?type=1&audio=ability
+```
+
+## Development
+
+Built with:
+- React
+- TypeScript
+- RemNote Plugin SDK
+
+To build the plugin:
+
+```bash
+npm install
+npm run dev   # For development with hot reload
+npm run build # For production build
+```
+
+## License
+
+MIT
 
 <!-- ignore-after -->

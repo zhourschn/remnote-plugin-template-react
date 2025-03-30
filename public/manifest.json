@@ -1,17 +1,17 @@
 {
-  "author": "zhourschn",
-  "name": "有道词典发音",
-  "description": "使用有道词典API播放单词发音，支持控制播放速度和重复次数",
+  "author": "your_username",
+  "name": "Youdao Audio Flashcards",
+  "description": "Automatically plays Youdao dictionary audio for English words in flashcards",
   "enableOnMobile": true,
-  "repoUrl": "https://github.com/zhourschn/remnote-plugin-template-react",
-  "id": "zhourschn-d88l3x4",
+  "repoUrl": "https://github.com/yourusername/remnote-youdao-audio-flashcards",
+  "id": "youdao-audio-flashcards",
   "manifestVersion": 1,
   "version": {
     "major": 0,
-    "minor": 0,
-    "patch": 1
+    "minor": 1,
+    "patch": 0
   },
-  "requestNative": false,
+  "requestNative": true,
   "requiredScopes": [
     {
       "type": "All",

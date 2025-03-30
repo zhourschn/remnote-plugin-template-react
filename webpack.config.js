@@ -21,11 +21,11 @@ const SANDBOX_SUFFIX = '-sandbox';
 
 const config = {
   mode: isProd ? 'production' : 'development',
-  entry: glob.sync('./src/widgets/**.tsx').reduce(function (obj, el) {
-    obj[path.parse(el).name] = el;
-    obj[path.parse(el).name + SANDBOX_SUFFIX] = el;
-    return obj;
-  }, {}),
+  entry: {
+    index: './src/index.tsx',
+    // 创建一个沙箱版本用于渲染
+    ['index' + SANDBOX_SUFFIX]: './src/index.tsx',
+  },
 
   output: {
     path: resolve(__dirname, 'dist'),
@@ -75,7 +75,7 @@ const config = {
       <script type="text/javascript">
       const urlSearchParams = new URLSearchParams(window.location.search);
       const queryParams = Object.fromEntries(urlSearchParams.entries());
-      const widgetName = queryParams["widgetName"];
+      const widgetName = queryParams["widgetName"] || "index";
       if (widgetName == undefined) {document.body.innerHTML+="Widget ID not specified."}
 
       const s = document.createElement('script');

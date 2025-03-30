@@ -43,3 +43,142 @@ body,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Custom styles for the Auto Audio Flashcards plugin */
+.p-2 {
+  padding: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #2563eb;
+}
+
+.bg-gray-400 {
+  background-color: #9ca3af;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+/* Button disabled state */
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Common plugin styles */
+:root {
+  --rem-primary: #12b7cb;
+  --rem-secondary: #0f9eb0;
+  --rem-button-color: white;
+}
+
+.url-audio-flashcard {
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.url-audio-flashcard .debug-info {
+  background-color: #f2f2f2;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.url-audio-flashcard .debug-info p {
+  margin: 4px 0;
+}
+
+.url-audio-flashcard .no-audio-found {
+  opacity: 0.7;
+}
+
+.url-audio-flashcard .audio-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.url-audio-flashcard .play-button {
+  background-color: var(--rem-primary);
+  color: var(--rem-button-color);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.url-audio-flashcard .play-button:hover {
+  background-color: var(--rem-secondary);
+}
+
+.url-audio-flashcard .play-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
